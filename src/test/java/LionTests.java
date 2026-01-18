@@ -50,10 +50,10 @@ public class LionTests {
 
     @Test
     @DisplayName("lion.getFood() возвращает рацион хищника")
-    void getFoodReturnsFoodListTest() throws Exception {
-        List<String> expectedResult = new ArrayList<>(List.of("Животные", "Птицы", "Рыба"));
+    void getFoodReturnsDietTest() throws Exception {
+        List<String> expected = new ArrayList<>(List.of("Животные", "Птицы", "Рыба"));
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-        List<String> actualResult = lion.getFood();
-        assertEquals(expectedResult, actualResult);
+        List<String> actual = lion.getFood();
+        assertEquals(expected, actual);
     }
 }
